@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Acquire — AURELIUS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header class="nav"><div class="glass"><div class="container nav-inner">
+  <a href="index.html" class="logo">AURELIUS</a>
+  <a id="back" href="index.html" class="luxe2 cream">← Back</a>
+</div></div></header>
+
+<div class="container co-grid">
+  <div class="co-form">
+    <p class="label luxe">— Secure Acquisition</p>
+    <h1 class="serif" style="font-size:clamp(2rem,5vw,3rem);line-height:1.1">Complete your <em class="gold-text">acquisition</em>.</h1>
+    <p class="muted" style="margin-top:.75rem;margin-bottom:3rem">Your details are encrypted and reviewed by our Geneva concierge.</p>
+    <form id="payform" novalidate>
+      <section>
+        <h2 class="sec">01 — Client Details</h2>
+        <div class="fields">
+          <div class="field"><label>First Name</label><input required placeholder="Henri"/></div>
+          <div class="field"><label>Last Name</label><input required placeholder="Aurelius"/></div>
+          <div class="field full"><label>Email</label><input required type="email" placeholder="you@maison.com"/></div>
+          <div class="field full"><label>Phone</label><input required placeholder="+41 22 707 30 10"/></div>
+        </div>
+      </section>
+      <section>
+        <h2 class="sec">02 — Insured Delivery</h2>
+        <div class="fields">
+          <div class="field full"><label>Address</label><input required placeholder="Rue du Rhône 62"/></div>
+          <div class="field"><label>City</label><input required placeholder="Geneva"/></div>
+          <div class="field"><label>Postal Code</label><input required placeholder="1204"/></div>
+          <div class="field full"><label>Country</label><input required placeholder="Switzerland"/></div>
+        </div>
+      </section>
+      <section>
+        <h2 class="sec">03 — Payment Method 🔒</h2>
+        <div class="fields">
+          <div class="field full"><label>Cardholder Name</label><input required placeholder="As shown on card"/></div>
+          <div class="field full"><label>Card Number</label><input required inputmode="numeric" maxlength="19" placeholder="0000  0000  0000  0000"/></div>
+          <div class="field"><label>Expiry</label><input required placeholder="MM / YY"/></div>
+          <div class="field"><label>CVC</label><input required inputmode="numeric" maxlength="4" placeholder="•••"/></div>
+        </div>
+      </section>
+
+      <div id="err" class="error" style="display:none">
+        <span class="x">⚠</span>
+        <div><p class="t">Bank Server Unavailable</p><p class="m">The bank server isn't working properly. Please try again later.</p></div>
+      </div>
+
+      <button id="paybtn" type="submit" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:2rem">Pay Now · <span id="paytxt"></span></button>
+      <p class="luxe2 muted" style="margin-top:1.5rem">⛨ 256-bit Encrypted · Maison Aurelius Geneva</p>
+    </form>
+  </div>
+
+  <aside>
+    <div class="summary glass">
+      <p class="label luxe">— Order Summary</p>
+      <div class="sum-img"><img id="simg" alt=""/></div>
+      <p class="luxe gold" id="sref"></p>
+      <h3 class="serif" id="sname" style="font-size:1.5rem;color:var(--cream);margin-top:.5rem"></h3>
+      <p class="muted" id="stagline" style="font-style:italic;margin-bottom:2rem"></p>
+      <div class="hairline" style="max-width:none;margin:1.5rem 0"></div>
+      <div class="sum-row"><span>Subtotal</span><span id="ssub"></span></div>
+      <div class="sum-row"><span>Insured Delivery</span><span>Complimentary</span></div>
+      <div class="sum-row"><span>Duties &amp; Tax</span><span>Calculated at concierge</span></div>
+      <div class="hairline" style="max-width:none;margin:1.5rem 0"></div>
+      <div class="sum-total"><span class="luxe muted">Total Due</span><span class="v gold-text" id="stot"></span></div>
+    </div>
+  </aside>
+</div>
+
+<script src="data.js"></script>
+<script>
+const slug = new URLSearchParams(location.search).get('slug') || 'royal';
+const w = getWatch(slug) || WATCHES[0];
+document.getElementById('back').href = `watch.html?slug=${w.slug}`;
+document.getElementById('simg').src = w.image;
+document.getElementById('sref').textContent = w.ref;
+document.getElementById('sname').textContent = w.name;
+document.getElementById('stagline').textContent = w.tagline;
+document.getElementById('ssub').textContent = w.price;
+document.getElementById('stot').textContent = w.price;
+document.getElementById('paytxt').textContent = w.price;
+
+const form = document.getElementById('payform');
+const btn = document.getElementById('paybtn');
+const err = document.getElementById('err');
+form.addEventListener('submit',(e)=>{
+  e.preventDefault();
+  err.style.display='none';
+  btn.disabled=true;
+  btn.innerHTML = 'Contacting Bank…';
+  setTimeout(()=>{
+    btn.disabled=false;
+    btn.innerHTML = `Pay Now · ${w.price}`;
+    err.style.display='flex';
+    alert("The bank server isn't working properly. Please try again later.");
+  },1600);
+});
+</script>
+</body>
+</html>

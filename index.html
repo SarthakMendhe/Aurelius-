@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>AURELIUS — Time Beyond Generations</title>
+<meta name="description" content="AURELIUS crafts hand-made Swiss luxury timepieces — heirloom watches engineered for legacy, precision, and quiet prestige."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"/>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 1.1s cubic-bezier(.22,1,.36,1),transform 1.1s cubic-bezier(.22,1,.36,1)}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<header class="nav"><div class="glass"><div class="container nav-inner">
+  <a href="index.html" class="logo">AURELIUS</a>
+  <nav class="nav-links luxe2">
+    <a href="#collections">Collections</a>
+    <a href="#craft">Craftsmanship</a>
+    <a href="#legacy">Legacy</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="nav-cta luxe2">Boutique</a>
+</div></div></header>
+
+<section class="hero" id="top">
+  <div class="hero-bg" data-parallax><img src="hero-watch.jpg" alt="AURELIUS signature timepiece"/></div>
+  <div class="vignette" style="position:absolute;inset:0;z-index:1"></div>
+  <div class="hero-content" data-parallax-fade>
+    <p class="luxe gold" style="margin-bottom:2rem">Maison Aurelius — Genève · Est. 1897</p>
+    <h1 class="serif">Time Beyond<br/><em class="gold-text">Generations</em></h1>
+    <p class="lead">Crafted for legacy and precision. Each AURELIUS is assembled by a single watchmaker over ninety days.</p>
+    <a href="#collections" class="link-underline" style="margin-top:3.5rem">Explore the Collection <span class="arrow">→</span></a>
+  </div>
+  <div style="position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:2" class="luxe muted">Scroll</div>
+</section>
+
+<section class="section bg-bg">
+  <div class="container two">
+    <div class="reveal frame"><img src="workshop.jpg" alt="Aurelius watchmaker at work"/></div>
+    <div class="reveal">
+      <p class="label luxe">— The Maison</p>
+      <h2 class="serif">A century of <em class="gold-text">silent mastery</em>.</h2>
+      <div class="hairline"></div>
+      <p class="muted" style="font-size:1.1rem;margin-bottom:1.5rem">Founded in the quiet ateliers of Geneva in 1897, AURELIUS has dedicated five generations to a single pursuit: timepieces that outlive their owners.</p>
+      <p class="muted">Every component is conceived, finished, and signed by hand. From the perlage of a mainplate to the polishing of a single bevel, no detail leaves the bench until it bears the maker's mark.</p>
+      <div class="stats">
+        <div><div class="n serif">128</div><div class="l">Years</div></div>
+        <div><div class="n serif">12</div><div class="l">Master Watchmakers</div></div>
+        <div><div class="n serif">90</div><div class="l">Days per Piece</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="collections" class="section bg-onyx">
+  <div class="container">
+    <div class="center reveal">
+      <p class="label luxe">— Collections</p>
+      <h2 class="serif">Four expressions of <em class="gold-text">eternity</em>.</h2>
+    </div>
+    <div class="cards" id="collections-grid"></div>
+  </div>
+</section>
+
+<section id="craft" class="craft">
+  <div class="craft-bg" data-parallax><img src="craft-detail.jpg" alt="Macro detail of AURELIUS dial"/></div>
+  <div class="craft-content"><div class="container craft-grid">
+    <div class="craft-text reveal">
+      <p class="label luxe">— Craftsmanship</p>
+      <h2 class="serif">Engineered by <em class="gold-text">hand</em>.<br/>Measured in patience.</h2>
+      <div class="hairline"></div>
+      <p style="color:rgba(241,234,216,.8);font-size:1.1rem;max-width:32rem">Three hundred and eighty-four components. Forty-two jewels. One pair of hands. Each AURELIUS movement is built across ninety days.</p>
+      <div style="margin-top:3rem">
+        <div class="bullet">Hand-finished Geneva stripes &amp; perlage</div>
+        <div class="bullet">Internally angled bevels — only achievable by hand</div>
+        <div class="bullet">Free-sprung balance regulated to ±2 sec/day</div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<section id="legacy" class="legacy">
+  <div class="reveal">
+    <p class="label luxe" style="margin-bottom:2.5rem">— Legacy</p>
+    <blockquote><span class="qmark serif">“</span>A watch is not just time.<br/>It is a <em class="gold-text">legacy</em> carried<br/>through generations.</blockquote>
+    <div class="hairline" style="margin:3rem auto;max-width:200px"></div>
+    <p class="luxe2 muted">— Henri Aurelius, 1903</p>
+  </div>
+</section>
+
+<section id="gallery" class="section bg-onyx" style="padding-bottom:4rem">
+  <div class="container" style="margin-bottom:4rem">
+    <div class="reveal" style="display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:2rem">
+      <div><p class="label luxe">— Editorial</p><h2 class="serif">In motion, in light.</h2></div>
+      <p class="muted" style="max-width:24rem">A visual dossier of the maison — captured between Geneva and Paris.</p>
+    </div>
+  </div>
+  <div class="reveal gallery-row">
+    <div class="item"><img src="gallery-1.jpg" alt=""/></div>
+    <div class="item"><img src="gallery-2.jpg" alt=""/></div>
+    <div class="item"><img src="gallery-3.jpg" alt=""/></div>
+    <div class="item"><img src="gallery-4.jpg" alt=""/></div>
+    <div class="item"><img src="craft-detail.jpg" alt=""/></div>
+    <div class="item"><img src="collection-royal.jpg" alt=""/></div>
+  </div>
+</section>
+
+<section class="section bg-bg">
+  <div class="container">
+    <div class="center reveal">
+      <p class="label luxe">— The Experience</p>
+      <h2 class="serif">Engineered for a lifetime.</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat reveal"><div class="ico">⚙</div><h3 class="serif">Swiss Movement</h3><p>In-house caliber, COSC certified to ±2 sec/day.</p></div>
+      <div class="feat reveal"><div class="ico">◇</div><h3 class="serif">Sapphire Crystal</h3><p>Anti-reflective, 2000 Vickers, formed in Lucerne.</p></div>
+      <div class="feat reveal"><div class="ico">◌</div><h3 class="serif">Water Resistance</h3><p>Tested to 100m beneath the Mediterranean.</p></div>
+      <div class="feat reveal"><div class="ico">♛</div><h3 class="serif">Limited Editions</h3><p>Numbered series, never reproduced.</p></div>
+      <div class="feat reveal"><div class="ico">⛨</div><h3 class="serif">Lifetime Craft</h3><p>Serviced by the original maker, in perpetuity.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:1.5rem">AURELIUS</div>
+        <p class="muted" style="max-width:24rem">Crafted in Geneva since 1897. By appointment to discerning collectors worldwide.</p>
+      </div>
+      <div>
+        <h4>Boutique</h4>
+        <ul>
+          <li>Rue du Rhône 62, Geneva</li>
+          <li>+41 22 707 30 10</li>
+          <li>concierge@aurelius.ch</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Maison</h4>
+        <ul>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#craft">Craftsmanship</a></li>
+          <li><a href="#legacy">Legacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2026 Maison Aurelius · Genève</div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+const grid = document.getElementById('collections-grid');
+WATCHES.forEach((c)=>{
+  const a=document.createElement('a');
+  a.href=`watch.html?slug=${c.slug}`;
+  a.className='card reveal';
+  a.innerHTML=`<img src="${c.image}" alt="${c.name}" loading="lazy"/>
+    <div class="card-body">
+      <p class="luxe gold">${c.tag}</p>
+      <h3 class="serif">${c.name}</h3>
+      <p class="muted" style="max-width:28rem">${c.description}</p>
+      <div class="row">
+        <span class="price">${c.price}</span>
+        <span class="luxe2">Discover &nbsp;<span style="color:var(--gold)">→</span></span>
+      </div>
+    </div>`;
+  grid.appendChild(a);
+});
+</script>
+<script src="app.js"></script>
+</body>
+</html>
